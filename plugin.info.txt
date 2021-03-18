@@ -1,0 +1,6 @@
+base   permalink
+author Alex Krippner
+email  krippner@cosmocode.org
+date   2021-03-17
+name   permalink
+desc   Place anchor links on headings
