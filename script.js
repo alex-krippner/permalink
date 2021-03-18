@@ -1,20 +1,9 @@
 jQuery(function () {
     const headings = jQuery('body').find('h1,h2,h3,h4,h5');
 
-    function findAnchor(heading) {
-        let isAnchored = false;
-        Object.values(heading.children).forEach(childElement => {
-
-            if (childElement.className === 'anchor' && childElement.tagName === 'A') {
-                isAnchored = true;
-            }
-        });
-        return isAnchored;
-    }
-
     headings.each(function (index) {
         const heading = headings[index];
-        const hasAnchor = findAnchor(heading);
+        const hasAnchor = heading.innerHTML.match(/class="anchor"/);
 
         if (!hasAnchor) {
             jQuery(heading).append('<a href="#' + heading.id + '" class="permalink-plugin__container">' +
